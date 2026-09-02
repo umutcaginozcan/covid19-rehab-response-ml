@@ -1,0 +1,28 @@
+# Default-deny: ignore everything at repo root, then re-include only the
+# two public analysis trees. Any new file/folder at root stays private
+# unless explicitly re-included here.
+/*
+!/ml_6mwt/
+!/ml_vo2peak/
+!/.gitignore
+!/README.md
+
+# Results (figures/metrics/tables) stay local; the repo ships code + calculators.
+/ml_6mwt/results/
+/ml_vo2peak/results/
+
+# Explicit private content (redundant with the allowlist above, kept as a
+# second safety layer and as documentation of what must never be committed).
+/data/
+/statistics/
+/snapshots/
+*.zip
+*.sav
+
+# OS / tooling cruft, at any depth (including inside the public trees).
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+node_modules/
