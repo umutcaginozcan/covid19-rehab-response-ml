@@ -7,8 +7,8 @@ This is a classification task; 1: responder, 0: non-responder.
 
 ## Try the calculators
 
-- [6-MWT calculator](https://colab.research.google.com/drive/1vi-hdYhZyMiF3VQXAQrh6BCCzg3aMe9L)
-- [VO₂peak calculator](https://colab.research.google.com/drive/1PcojcJT0PXdfimnPXBesGnAWxwmL9E-D)
+- [6-MWT calculator](https://colab.research.google.com/drive/1cjmZ21nomDHCH26GrAkGF5i0e6rYc08L)
+- [VO₂peak calculator](https://colab.research.google.com/drive/1oYNnqnQo8n_qstsf-EhdnCnSNVJaQDPn)
 
 Both notebooks use model coefficients only; no patient data is included.
 

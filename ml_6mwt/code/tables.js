@@ -101,7 +101,7 @@ function buildDoc(titleNo, titleRest, metricCols, primaryKey, winnerOf, rowsData
 }
 
 const METHODS = 'Models were evaluated with person-grouped repeated 5-fold cross-validation (5 repeats, 25 folds); both records of an individual enrolled in two arms were kept in the same fold. Values are mean ± SD across the 25 validation folds. All predictors are baseline measurements plus the training-group indicator. Median imputation and standardization were fit within each training fold; elastic-net and ridge penalties were tuned by nested 3-fold cross-validation. Classification threshold 0.5.';
-const FEATSETS = 'Feature sets — group-only / baseline + group: training-arm indicators (plus baseline 6-MWT distance for regression); compact-8: training arm, baseline 6-MWT distance, MIP, VO₂peak, FSS, SGRQ total, age, BMI; full-16 additionally: sex, time since COVID-19 diagnosis, CT involvement >50%, hospitalization, Charlson index, smoking history, exercise habit, MEP, quadriceps strength; full-211: from the complete pool of 211 baseline variables, 6 were selected within each training fold by forward sequential selection or backward elimination (RFE, step 10); test folds never entered selection.';
+const FEATSETS = 'Feature sets — group-only / baseline + group: training-arm indicators (plus baseline 6-MWT distance for regression); compact-8: training arm, baseline 6-MWT distance, MIP, VO₂peak, FSS, SGRQ total, age, BMI; full-16 additionally: sex, time since COVID-19 diagnosis, CT involvement >50%, hospitalization, Charlson index, smoking history, exercise habit, MEP, quadriceps strength; full-211: from the complete pool of 211 candidate predictors (209 baseline variables plus the two training-arm indicators), 6 were selected within each training fold by forward sequential selection or backward elimination (RFE, step 10); test folds never entered selection.';
 
 buildDoc(
   'Table 15',
@@ -117,7 +117,7 @@ buildDoc(
      it('NPV'), run(' negative predictive value, '), it('MCC'), run(' Matthews correlation coefficient, '),
      it('Brier score'), run(' mean squared error of predicted probabilities (lower is better), '),
      it('SD'), run(' standard deviation, '), it('6-MWT'), run(' six-minute walk test')],
-    '†F1 score was the prespecified primary metric for model selection; the selected model (logistic regression, compact-8) is shown in bold. Responder: increase of ≥ 25 m in 6-MWT distance; n = 55 records (31 responders, 24 non-responders).',
+    '†F1 score was the primary metric for model selection; the selected model (logistic regression, compact-8) is shown in bold. Responder: increase of ≥ 25 m in 6-MWT distance; n = 55 records (31 responders, 24 non-responders).',
     METHODS, FEATSETS,
   ],
   `${OUTDIR}/Table15_ML_responder_scoreboard.docx`,

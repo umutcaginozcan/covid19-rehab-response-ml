@@ -101,7 +101,7 @@ function buildDoc(titleNo, titleRest, metricCols, primaryKey, winnerOf, rowsData
 }
 
 const METHODS = 'Models were evaluated with person-grouped repeated 5-fold cross-validation (5 repeats, 25 folds); both records of an individual enrolled in two arms were kept in the same fold. Values are mean ± SD across the 25 validation folds. All predictors are baseline measurements plus the training-group indicator. Median imputation and standardization were fit within each training fold; elastic-net and ridge penalties were tuned by nested 3-fold cross-validation. Classification threshold 0.5.';
-const FEATSETS = 'Feature sets — group-only: training-arm indicators; compact-5: training arm, daily step count, physical-activity duration, baseline 6-MWT distance, regular exercise habit (an exploratory, hypothesis-generated set; see footnote); full-211: from the complete pool of 211 baseline variables, 6 were selected within each training fold by forward sequential selection or backward elimination (RFE, step 10); test folds never entered selection.';
+const FEATSETS = 'Feature sets — group-only: training-arm indicators; compact-5: training arm, daily step count, physical-activity duration, baseline 6-MWT distance, regular exercise habit (an exploratory, hypothesis-generated set; see footnote); full-211: from the complete pool of 211 candidate predictors (209 baseline variables plus the two training-arm indicators), 6 were selected within each training fold by forward sequential selection or backward elimination (RFE, step 10); test folds never entered selection.';
 
 buildDoc(
   'Table S3',
